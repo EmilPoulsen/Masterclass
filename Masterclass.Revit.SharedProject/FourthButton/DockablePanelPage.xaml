@@ -11,6 +11,26 @@
     Background="White">
 
     <Grid>
-        <TextBlock>Hello world!</TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"
+               Content="Living Room Designer"
+               VerticalAlignment="Center"
+               FontWeight="Bold"
+               FontSize="14"
+               Margin="10,0,0,0"
+               Padding="0"></Label>
+        <Button
+            Grid.Row="0"
+            Content="Reload" 
+            Width="75" 
+            Height="20" 
+            HorizontalAlignment="Right" 
+            Margin="0,0,10,0"
+            Command="{Binding LoadRequirements}">
+            
+        </Button>
     </Grid>
 </Page>
