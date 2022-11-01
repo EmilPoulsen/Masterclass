@@ -10,9 +10,9 @@ using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Masterclass.Revit.FourthButton
 {
-    public sealed partial class DockablePanel : IDockablePaneProvider
+    public sealed partial class DockablePanelPage: IDockablePaneProvider
     {
-        public DockablePanel()
+        public DockablePanelPage()
         {
             this.InitializeComponent();
         }

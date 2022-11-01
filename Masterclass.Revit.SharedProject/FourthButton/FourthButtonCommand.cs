@@ -14,6 +14,7 @@ namespace Masterclass.Revit.FourthButton
         {
             try
             {
+                var app = commandData.Application;
                 DockablePanelUtil.ShowDockablePanel(app);
 
             }
