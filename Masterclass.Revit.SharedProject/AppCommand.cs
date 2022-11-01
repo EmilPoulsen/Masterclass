@@ -2,12 +2,16 @@
 using System.Linq;
 using Autodesk.Revit.UI;
 using Masterclass.Revit.FirstButton;
+using Masterclass.Revit.FourthButton;
 using Masterclass.Revit.SecondButton;
+using Masterclass.Revit.Utilities;
 
 namespace Masterclass.Revit
 {
     public class AppCommand : IExternalApplication
     {
+        public object FourthButton { get; private set; }
+
         public Result OnStartup(UIControlledApplication app)
         {
             try
@@ -26,7 +30,10 @@ namespace Masterclass.Revit
             FirstButtonCommand.CreateButton(ribbonPanel);
             ribbonPanel.AddSeparator();
             SecondButtonCommand.CreateButton(ribbonPanel);
+            ribbonPanel.AddSeparator();
+            FourthButtonCommand.CreateButton(ribbonPanel);
 
+            DockablePanelUtil.RegisterDockablePanel(app);
             return Result.Succeeded;
         }
 

@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AppCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirstButton\FirstButtonCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FourthButton\FourthButtonCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SecondButton\SecondButtonCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SecondButton\SecondButtonModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SecondButton\SecondButtonView.xaml.cs">
