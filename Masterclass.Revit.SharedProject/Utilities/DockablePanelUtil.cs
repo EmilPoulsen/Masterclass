@@ -16,27 +16,19 @@ namespace Masterclass.Revit.Utilities
             {
                 DataContext = vm
             };
-            var panelId = new Guid("16a7f098-59be-4d50-b6fd-8c3d40a27c34");
-            var e = new DockablePaneId(panelId);
+            var panelId = new DockablePaneId(new Guid("16a7f098-59be-4d50-b6fd-8c3d40a27c34"));
 
-            a.RegisterDockablePane(e, "MasterClass", v);
-
-            //var data = new DockablePaneProviderData()
-            //{
-            //    FrameworkElement = v,
-            //    InitialState = new DockablePaneState()
-            //    {
-            //        DockPosition = DockPosition.Tabbed,
-            //        TabBehind = DockablePanes.BuiltInDockablePanes.ProjectBrowser
-            //    }
-            //};
-            //data.VisibleByDefault = true;
-
+            a.RegisterDockablePane(panelId, "MasterClass", v);
         }
 
         public static void ShowDockablePanel(UIApplication app)
         {
-
+            var panelId = new DockablePaneId(new Guid("16a7f098-59be-4d50-b6fd-8c3d40a27c34"));
+            var dp = app.GetDockablePane(panelId);
+            if(dp != null && !dp.IsShown())
+            {
+                dp.Show(); 
+            }
         }
     }
 }

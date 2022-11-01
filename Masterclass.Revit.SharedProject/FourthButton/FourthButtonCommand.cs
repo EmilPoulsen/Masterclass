@@ -1,4 +1,5 @@
-﻿using Autodesk.Revit.DB;
+﻿using Autodesk.Revit.Attributes;
+using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Masterclass.Revit.Utilities;
 using System;
@@ -8,6 +9,9 @@ using System.Text;
 
 namespace Masterclass.Revit.FourthButton
 {
+    [Transaction(TransactionMode.Manual)]
+    [Regeneration(RegenerationOption.Manual)]
+    [Journaling(JournalingMode.NoCommandData)]
     public class FourthButtonCommand : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
@@ -40,7 +44,6 @@ namespace Masterclass.Revit.FourthButton
                      ToolTip = "Fourth button tooltip",
                       LargeImage = ImageUtils.LoadImage(assem, "_32x32.secondButton.png")
                 });
-
         }
     }
 }

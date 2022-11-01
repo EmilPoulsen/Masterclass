@@ -11,6 +11,6 @@
     Background="White">
 
     <Grid>
-
+        <TextBlock>Hello world!</TextBlock>
     </Grid>
 </Page>
